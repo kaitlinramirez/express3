@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+var PORT = process.env.PORT || 3000
 
 var students =[{
   id: 1,
@@ -57,4 +58,4 @@ app.get("/:id", function(request, response){
   response.json({data: record})
 })
 
-app.listen(9000)
+app.listen(PORT)
